@@ -1,0 +1,12 @@
+<!-- will need to edit to model -->
+<ul class="dashboard-table table__content">
+  <li class="table__details">
+      <p class="table__name"><%= product.employee.name%></p>
+  </li>
+  <li class="table__details table__dates">
+    <%= product.start_date.try(:strftime, '%d %b %Y') %> - <%= product.expiry_date.try(:strftime,'%d %b %Y')%>
+  </li>
+  <li class="table__details">
+    <p class="table__premium">$<%= product.premium %></p>
+  </li>
+</ul>

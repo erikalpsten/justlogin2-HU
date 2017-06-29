@@ -19,6 +19,7 @@ class ProcessingController < ApplicationController
   # end
 
   def complete
+    puts 'test'
     @products = Refinery::Products::Product.where(id: session[:product_ids])
     @user_submission = Refinery::Products::UserSubmission.new(user_submission_params)
     @user_submission.benefits = Refinery::Products::Benefit.where(id: session[:find_out_more])

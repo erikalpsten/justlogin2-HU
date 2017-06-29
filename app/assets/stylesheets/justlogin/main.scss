@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   //height: 100%;
-  height: calc(100% - 110px);
+  height: 100%;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   background-color: #faf9f7;
@@ -280,7 +280,107 @@ input[type=checkbox]:checked:after {
   border-radius: 2px;
   background: #F3A81D;
 }
+/* -------------------------------------------------------- Erik's crap */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
 
+.dropbtn:hover{
+  background-color: #3e8e41;
+}
+#myInput {
+  border-box: box-sizing;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  width: 75px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  margin: auto;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+.show {display: block;}
+.hide {display: none;}
+
+.right-inner-addon i{
+  padding: 10px 12px;
+  #margin: auto;
+  pointer-events: none;
+}
+.tg{
+  border-collapse:collapse;
+  border-spacing:0;
+  margin-left: 30px;
+  border-color: #dbdbdb;
+  margin-top: 20px;
+}
+.tg td{
+  font-family: 'Arial', sans-serif;
+  font-size:14px;
+  padding:10px 5px;
+  border-style: none;
+  overflow: hidden;
+  word-break: normal;
+  vertical-align: top;
+}
+.tg th{
+  font-family: 'Arial', sans-serif;
+  font-size:14px;
+  font-weight: normal;
+  padding:10px 5px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+  border-color: #dbdbdb;
+  vertical-align: top;
+}
+.tg .tg-baqh{
+  text-align: center;
+  vertical-align: top;
+}
+.tg .tg-1{
+  width: 300px;
+}
+.tg .tg-2{
+  width: 150px;
+}
+.tg .tablehead{
+  font-weight: bold;
+  border-style: none;
+  padding: 2px 5px;
+}
+.test-display{
+  margin-top: 140px;
+}
 /* -------------------------------------------------------- PRODUCTS */
 .products-display {
   margin-top: 110px;
@@ -672,6 +772,7 @@ address .address-info {
 
 .btn-primary[disabled]:hover,
 .btn-primary:hover,
+.btn-primary:focus,
 .btn-primary:focus,
 .btn-primary:active {
   background-color: #eb5f00;

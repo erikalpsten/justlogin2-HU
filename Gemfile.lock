@@ -1,6 +1,9 @@
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-policies (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.5)
     refinerycms-products (1.0)
       acts_as_indexed (~> 0.8.0)
       friendly_id (~> 5.1.0)
@@ -219,6 +222,10 @@ GEM
       railties (>= 3.2.16)
     json (1.8.6)
     kgio (2.10.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -461,6 +468,7 @@ DEPENDENCIES
   hub
   jbuilder (~> 2.0)
   jquery-rails
+  letter_opener
   money
   pg (~> 0.15)
   quiet_assets
@@ -472,6 +480,7 @@ DEPENDENCIES
   refinerycms (~> 3.0.0)
   refinerycms-acts-as-indexed (~> 3.0.0)
   refinerycms-authentication-devise (~> 1.0.4)
+  refinerycms-policies!
   refinerycms-products!
   refinerycms-settings
   refinerycms-wymeditor (~> 1.0, >= 1.0.7)
@@ -484,4 +493,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.13.1
+   1.15.0

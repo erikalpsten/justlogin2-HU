@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170514124017) do
+ActiveRecord::Schema.define(version: 20170615074132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attachments_policies", force: :cascade do |t|
+    t.integer "refinery_policy_id"
+    t.integer "refinery_policy_attachment_id"
+  end
+
+  add_index "attachments_policies", ["refinery_policy_id", "refinery_policy_attachment_id"], name: "attachments_policies_index", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -66,6 +73,8 @@ ActiveRecord::Schema.define(version: 20170514124017) do
     t.datetime "updated_at"
     t.string   "slug"
     t.string   "full_name"
+    t.string   "comapany"
+    t.string   "phone"
   end
 
   add_index "refinery_authentication_devise_users", ["id"], name: "index_refinery_authentication_devise_users_on_id", using: :btree
@@ -160,6 +169,78 @@ ActiveRecord::Schema.define(version: 20170514124017) do
   add_index "refinery_pages", ["parent_id"], name: "index_refinery_pages_on_parent_id", using: :btree
   add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt", using: :btree
 
+  create_table "refinery_policies", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "logo_id"
+    t.string   "insurer"
+    t.decimal  "premium"
+    t.integer  "benefit_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "employee_id"
+    t.integer  "claim_id"
+    t.string   "advisor_name"
+    t.date     "start_date"
+    t.date     "expiry_date"
+  end
+
+  add_index "refinery_policies", ["benefit_id"], name: "index_refinery_policies_on_benefit_id", using: :btree
+
+  create_table "refinery_policies_attachments", force: :cascade do |t|
+    t.integer  "file_id"
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_policies_claims", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_policies_employees", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_policies_policy_feature_groups", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_policies_policy_features", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "policy_feature_group_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refinery_policies_policy_features", ["policy_feature_group_id"], name: "policy_feature_group_id_idx", using: :btree
+
+  create_table "refinery_policies_policy_features_policies", force: :cascade do |t|
+    t.integer  "policy_feature_id"
+    t.integer  "policy_id"
+    t.string   "value"
+    t.boolean  "is_in_summary"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refinery_policies_policy_features_policies", ["policy_feature_id", "policy_id"], name: "policy_feature_policy_idx", using: :btree
+
   create_table "refinery_products", force: :cascade do |t|
     t.string   "name"
     t.integer  "logo_id"
@@ -191,6 +272,14 @@ ActiveRecord::Schema.define(version: 20170514124017) do
   end
 
   add_index "refinery_products_benefits_user_submissions", ["benefit_id", "user_submission_id"], name: "products_benefit_id_user_submission_id", using: :btree
+
+  create_table "refinery_products_employees", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_products_feature_groups", force: :cascade do |t|
     t.string   "name"

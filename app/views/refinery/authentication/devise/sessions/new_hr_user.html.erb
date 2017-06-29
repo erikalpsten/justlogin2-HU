@@ -1,0 +1,28 @@
+<%= content_for :login_form do %>
+<%= form_for :authentication_devise_user, as: resource_name,
+ :url => '/login' do |f| %>
+ <%= image_tag("logo.png") %>
+<div class="login">
+  <div class='field session_username clearfix login-email'>
+    <i class="material-icons">mail_outline</i>
+    <%= f.text_field :login, :class => 'larger widest' %>
+  </div>
+  <div class='field session_password clearfix login-password'>
+    <i class="material-icons">lock_outline</i>
+    <%= f.password_field :password, :autocomplete => 'off', :class => 'larger widest' %>
+  </div>
+  <div class='clearfix'>
+    <% if devise_mapping.rememberable? %>
+      <div class='login-remember field remember_me'>
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+    <div class='login-forget-password field forgot_password'>
+      <%= link_to 'Forgot Password?', refinery.new_authentication_devise_user_password_path %>
+    </div>
+  </div>
+  <button>Login</button>
+</div>
+<% end -%>
+<% end %>

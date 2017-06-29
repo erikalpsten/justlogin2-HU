@@ -1,0 +1,82 @@
+<div class="policy__details">
+  <div class="policy__header">
+    <div class="policy__header__left">
+      <% if @policy.logo.present? %>
+        <%= image_tag(@policy.logo.thumbnail(geometry: "200x200#c").url, :class => "policy__logo")%>
+      <% end %>
+      <h1 class="policy__name"><%= @policy.name %></h1>
+      <% if @policy.claim.id.present? %>
+        <%= button_to('Make a claim', '/policies/claims/' + @policy.claim.id.to_s, method: :get, form: {target: '_blank'}, class: 'btn btn-primary policy__claim') %>
+      <% else %>
+        <button class='btn btn-primary policy__claim' disabled='true'> Make a claim </button>
+      <% end %>
+    </div>
+    <div class="policy__header__right">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    </div>
+  </div>
+  <div class="policy__content">
+    <div class="policy__content__type">
+      <p class="policy__content__headers">
+        Policy Type:
+      </p>
+      <h4 class="policy__content__details">
+        <%= @policy.benefit.name %>
+      </h4>
+    </div>
+    <div class="policy__content__premiums">
+      <p class="policy__content__headers">
+        Premiums (per employee):
+      </p>
+      <h4 class="policy__content__details">
+        $<%= @policy.premium %>/year
+      </h4>
+    </div>
+    <div class="policy__content__feature_group">
+      <p class="policy__content__headers">
+        Feature Groups
+      </p>
+      <% @feature_groups.each do |feature_group| %>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading-<%= feature_group.id %>">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-<%= feature_group.id %>" aria-expanded="true" aria-controls="collapse-<%= feature_group.id %>">
+                  <%= feature_group.name %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse-<%= feature_group.id %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<%= feature_group.id %>">
+              <div class="panel-body">
+                <% @policy.policy_features.each do |policy_feature| %>
+                  <% if policy_feature.policy_feature_group_id === feature_group.id %>
+                    <%= policy_feature.name %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="policy__content__attachments">
+      <p class="policy__content__headers">
+        Attachments:
+      </p>
+      <div>
+        <% if @policy.attachments.present? %>
+          <% @policy.attachments.each do |attachment| %>
+            <% if attachment.file.present? %>
+              <p>
+                <%= link_to attachment.name, attachment.file.url %>
+              </p>
+            <% else %>
+            <p> No attachments </p>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>

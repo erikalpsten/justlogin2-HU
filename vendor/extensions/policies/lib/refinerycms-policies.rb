@@ -1,0 +1,8 @@
+require 'refinery/policies'
+require 'refinery/policy_feature_groups'
+require 'refinery/policy_features'
+require 'refinery/policy_features_policies'
+require 'refinery/employees'
+require 'refinery/policies'
+require 'refinery/attachments'
+require 'refinery/claims'

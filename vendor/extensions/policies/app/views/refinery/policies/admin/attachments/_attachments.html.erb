@@ -1,0 +1,2 @@
+<%= will_paginate @attachments if Refinery::Policies::Admin::AttachmentsController.pageable? %>
+<%= render 'sortable_list' %>

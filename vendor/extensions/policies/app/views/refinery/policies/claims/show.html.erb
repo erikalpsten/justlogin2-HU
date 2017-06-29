@@ -1,0 +1,11 @@
+<% content_for :body do %>
+ <div class="claim-content" style="width: 50%; margin: auto; background-color:blanchedalmond; padding: 75px;">
+  <h4> <%=raw @claim.name %> </h4>
+  <h4>Description: </h4>
+  <p>
+    <%=raw @claim.description %>
+  </p>
+</div>
+<% end %>
+
+<%= render '/refinery/content_page' %>

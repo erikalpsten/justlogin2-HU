@@ -1,0 +1,162 @@
+zh-CN:
+  refinery:
+    plugins:
+      claims:
+        title: Claims
+      attachments:
+        title: Attachments
+      policies:
+        title: Policies
+      employees:
+        title: Employees
+      policy_features_policies:
+        title: Policy Features Policies
+      policy_features:
+        title: Policy Features
+      policy_feature_groups:
+        title: Policy Feature Groups
+    policies:
+      admin:
+        claims:
+          actions:
+            create_new: 建立新的 Claim
+            reorder: 对 Claims 重新排序
+            reorder_done: 对 Claims 的重新排序结束
+          records:
+            title: Claims
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Claims . 点击 "Add New Claim" 创建一个claim.
+          claim:
+            view_live_html: 查看 claim 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 claim
+            delete: 永久删除 claim
+        attachments:
+          actions:
+            create_new: 建立新的 Attachment
+            reorder: 对 Attachments 重新排序
+            reorder_done: 对 Attachments 的重新排序结束
+          records:
+            title: Attachments
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Attachments . 点击 "Add New Attachment" 创建一个attachment.
+          attachment:
+            view_live_html: 查看 attachment 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 attachment
+            delete: 永久删除 attachment
+        policies:
+          actions:
+            create_new: 建立新的 Policy
+            reorder: 对 Policies 重新排序
+            reorder_done: 对 Policies 的重新排序结束
+          records:
+            title: Policies
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Policies . 点击 "Add New Policy" 创建一个policy.
+          policy:
+            view_live_html: 查看 policy 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 policy
+            delete: 永久删除 policy
+        employees:
+          actions:
+            create_new: 建立新的 Employee
+            reorder: 对 Employees 重新排序
+            reorder_done: 对 Employees 的重新排序结束
+          records:
+            title: Employees
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Employees . 点击 "Add New Employee" 创建一个employee.
+          employee:
+            view_live_html: 查看 employee 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 employee
+            delete: 永久删除 employee
+        policy_features_policies:
+          actions:
+            create_new: 建立新的 Policy Features Policy
+            reorder: 对 Policy Features Policies 重新排序
+            reorder_done: 对 Policy Features Policies 的重新排序结束
+          records:
+            title: Policy Features Policies
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Policy Features Policies . 点击 "Add New Policy Features
+              Policy" 创建一个policy features policy.
+          policy_features_policy:
+            view_live_html: 查看 policy features policy 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 policy features policy
+            delete: 永久删除 policy features policy
+        policy_features:
+          actions:
+            create_new: 建立新的 Policy Feature
+            reorder: 对 Policy Features 重新排序
+            reorder_done: 对 Policy Features 的重新排序结束
+          records:
+            title: Policy Features
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Policy Features . 点击 "Add New Policy Feature" 创建一个policy
+              feature.
+          policy_feature:
+            view_live_html: 查看 policy feature 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 policy feature
+            delete: 永久删除 policy feature
+        policy_feature_groups:
+          actions:
+            create_new: 建立新的 Policy Feature Group
+            reorder: 对 Policy Feature Groups 重新排序
+            reorder_done: 对 Policy Feature Groups 的重新排序结束
+          records:
+            title: Policy Feature Groups
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Policy Feature Groups . 点击 "Add New Policy Feature
+              Group" 创建一个policy feature group.
+          policy_feature_group:
+            view_live_html: 查看 policy feature group 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 policy feature group
+            delete: 永久删除 policy feature group
+      claims:
+        show:
+          other: 其他 Claims
+      attachments:
+        show:
+          other: 其他 Attachments
+      policies:
+        show:
+          other: 其他 Policies
+      employees:
+        show:
+          other: 其他 Employees
+      policy_features_policies:
+        show:
+          other: 其他 Policy Features Policies
+      policy_features:
+        show:
+          other: 其他 Policy Features
+      policy_feature_groups:
+        show:
+          other: 其他 Policy Feature Groups
+  activerecord:
+    attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
+      refinery/policies/attachment:
+        file: File
+        name: Name
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
+      refinery/policies/employee:
+        name: Name
+        user_id: User
+      refinery/policies/policy_features_policy:
+        policy_feature_id: Policy Feature
+        policy_id: Policy
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/policies/policy_feature:
+        name: Name
+        policy_feature_group_id: Policy Feature Group
+      refinery/policies/policy_feature_group:
+        name: Name

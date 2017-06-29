@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Policies::Admin::PolicyFeaturesPoliciesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.policies_admin_policy_features_policies_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_policies_admin_policy_features_policy_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Policies::Admin::PolicyFeaturesPoliciesController.sortable? && ::Refinery::Policies::PolicyFeaturesPolicy.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.policies_admin_policy_features_policies_path,
+                     t('.reorder', what:  "Policy Features Policies"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.policies_admin_policy_features_policies_path,
+                      t('.reorder_done', what: "Policy Features Policies"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

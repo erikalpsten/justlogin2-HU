@@ -1,0 +1,30 @@
+<%= form_for [refinery, :policies_admin, @policy_features_policy] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @policy_features_policy,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :policy_feature_id -%>
+    <%= f.number_field :policy_feature_id -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :policy_id -%>
+    <%= f.number_field :policy_id -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :value -%>
+    <%= f.text_field :value -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :is_in_summary -%>
+    <%= f.check_box :is_in_summary, :checked => @policy_features_policy[:is_in_summary] -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.policy_features_policies.admin.policy_features_policies.policy_features_policy'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @policy_features_policy.value) -%>
+<% end -%>

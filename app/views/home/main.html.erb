@@ -1,0 +1,78 @@
+<div class="dashboard-modal modal fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 class="modal-heading policy__name">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>Modal body</p>
+  </div>
+</div>
+
+<div class="dashboard-navbar">
+  <div class="dashboard-company">
+    <h1>Hi, <%= current_authentication_devise_user.username %></h1>
+  </div>
+  <div class="dashboard-nav">
+    <a href="/" target="_blank">
+      <div class="home">
+        <i class="material-icons">&#xE88A;</i>
+      </div>
+    </a>
+    <div class="user">
+      <i class="material-icons">&#xE851;</i>
+      <div class="user__dropdown">
+        <ul>
+          <li><%= link_to 'Profile', '/users/' + current_authentication_devise_user.id.to_s + '/edit',
+            input_html: "id='11'"%></li>
+          <a id="12" href="/complete"><li>Settings</li></a>
+          <a id="13" href="/admin/logout"><li>Logout</li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="faq">
+      <a href="">
+        <i class="material-icons">&#xE887;</i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper" id="product-listing">
+      <div class="dashboard-search">
+        <form method="get" name="search" action="main">
+          <input type="text" id="search" name="search" placeholder="Enter employee name"/>
+          <button>Search</button>
+        </form>
+      </div>
+      <div>
+        <% if @products.length != 0 %>
+          <ul class="dashboard-table table__headers">
+            <li class="table__head">
+              <p class="table__name">Employee Name</p>
+            </li>
+            <li class="table__head">
+              <p class="table__dates">Start Date - Expiry Date</p>
+            </li>
+            <li class="table__head">
+              <p class="table__premium">Premium</p>
+            </li>
+            </ul>
+            <% @products.each do |product| %>
+                <%= link_to '/policies/' + product.id.to_s, remote:true do %>
+                  <%= render partial: 'tablerow', locals: { product: product } %>
+                <% end %>
+            <% end %>
+        <% else %>
+          <table class="dashboard-table table">
+            <tr><td class="tablehead">No such products found...</td></tr>
+          </table>
+        <% end %>
+      </div>
+    </div>
+<script>
+  var open = false;
+  function dropdown(){
+      document.getElementById("myDropdown").classList.toggle("show");
+      open = true;
+  }
+</script>

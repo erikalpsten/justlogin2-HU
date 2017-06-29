@@ -1,0 +1,173 @@
+fr:
+  refinery:
+    plugins:
+      claims:
+        title: Claims
+      attachments:
+        title: Attachments
+      policies:
+        title: Policies
+      employees:
+        title: Employees
+      policy_features_policies:
+        title: Policy Features Policies
+      policy_features:
+        title: Policy Features
+      policy_feature_groups:
+        title: Policy Feature Groups
+    policies:
+      admin:
+        claims:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Claim
+            reorder: Réordonner les Claims
+            reorder_done: Fin de réordonnancement des Claims
+          records:
+            title: Claims
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Claim. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Claim" pour créer votre premi(er/ère) claim.
+          claim:
+            view_live_html: Voir ce(t/tte) claim <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) claim
+            delete: Supprimer définitivement ce(t/tte) claim
+        attachments:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Attachment
+            reorder: Réordonner les Attachments
+            reorder_done: Fin de réordonnancement des Attachments
+          records:
+            title: Attachments
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Attachment. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Attachment" pour créer votre premi(er/ère) attachment.
+          attachment:
+            view_live_html: Voir ce(t/tte) attachment <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) attachment
+            delete: Supprimer définitivement ce(t/tte) attachment
+        policies:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Policy
+            reorder: Réordonner les Policies
+            reorder_done: Fin de réordonnancement des Policies
+          records:
+            title: Policies
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Policy. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Policy" pour créer votre premi(er/ère) policy.
+          policy:
+            view_live_html: Voir ce(t/tte) policy <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) policy
+            delete: Supprimer définitivement ce(t/tte) policy
+        employees:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Employee
+            reorder: Réordonner les Employees
+            reorder_done: Fin de réordonnancement des Employees
+          records:
+            title: Employees
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Employee. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Employee" pour créer votre premi(er/ère) employee.
+          employee:
+            view_live_html: Voir ce(t/tte) employee <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) employee
+            delete: Supprimer définitivement ce(t/tte) employee
+        policy_features_policies:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Policy Features Policy
+            reorder: Réordonner les Policy Features Policies
+            reorder_done: Fin de réordonnancement des Policy Features Policies
+          records:
+            title: Policy Features Policies
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Policy Features Policy. Cliquer
+              sur "Créer un(e) nouve(au/l/lle) Policy Features Policy" pour créer
+              votre premi(er/ère) policy features policy.
+          policy_features_policy:
+            view_live_html: Voir ce(t/tte) policy features policy <br/><em>(Ouvre
+              une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) policy features policy
+            delete: Supprimer définitivement ce(t/tte) policy features policy
+        policy_features:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Policy Feature
+            reorder: Réordonner les Policy Features
+            reorder_done: Fin de réordonnancement des Policy Features
+          records:
+            title: Policy Features
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Policy Feature. Cliquer sur
+              "Créer un(e) nouve(au/l/lle) Policy Feature" pour créer votre premi(er/ère)
+              policy feature.
+          policy_feature:
+            view_live_html: Voir ce(t/tte) policy feature <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) policy feature
+            delete: Supprimer définitivement ce(t/tte) policy feature
+        policy_feature_groups:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Policy Feature Group
+            reorder: Réordonner les Policy Feature Groups
+            reorder_done: Fin de réordonnancement des Policy Feature Groups
+          records:
+            title: Policy Feature Groups
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Policy Feature Group. Cliquer
+              sur "Créer un(e) nouve(au/l/lle) Policy Feature Group" pour créer votre
+              premi(er/ère) policy feature group.
+          policy_feature_group:
+            view_live_html: Voir ce(t/tte) policy feature group <br/><em>(Ouvre une
+              nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) policy feature group
+            delete: Supprimer définitivement ce(t/tte) policy feature group
+      claims:
+        show:
+          other: Autres Claims
+      attachments:
+        show:
+          other: Autres Attachments
+      policies:
+        show:
+          other: Autres Policies
+      employees:
+        show:
+          other: Autres Employees
+      policy_features_policies:
+        show:
+          other: Autres Policy Features Policies
+      policy_features:
+        show:
+          other: Autres Policy Features
+      policy_feature_groups:
+        show:
+          other: Autres Policy Feature Groups
+  activerecord:
+    attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
+      refinery/policies/attachment:
+        file: File
+        name: Name
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
+      refinery/policies/employee:
+        name: Name
+        user_id: User
+      refinery/policies/policy_features_policy:
+        policy_feature_id: Policy Feature
+        policy_id: Policy
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/policies/policy_feature:
+        name: Name
+        policy_feature_group_id: Policy Feature Group
+      refinery/policies/policy_feature_group:
+        name: Name

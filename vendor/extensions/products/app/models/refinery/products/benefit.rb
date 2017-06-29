@@ -8,6 +8,10 @@ module Refinery
                           foreign_key: 'benefit_id',
                           inverse_of: :benefit
 
+      has_many :policies, class_name: 'Refinery::Policies::Policy',
+                          foreign_key: 'benefit_id',
+                          inverse_of: :benefit
+
       validates :name, :presence => true, :uniqueness => true
 
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:

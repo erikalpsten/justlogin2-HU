@@ -1,0 +1,168 @@
+ru:
+  refinery:
+    plugins:
+      claims:
+        title: Claims
+      attachments:
+        title: Attachments
+      policies:
+        title: Policies
+      employees:
+        title: Employees
+      policy_features_policies:
+        title: Policy Features Policies
+      policy_features:
+        title: Policy Features
+      policy_feature_groups:
+        title: Policy Feature Groups
+    policies:
+      admin:
+        claims:
+          actions:
+            create_new: Добавить Claim
+            reorder: Изменить порядок Claims
+            reorder_done: Закончить изменять порядок Claims
+          records:
+            title: Claims
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Claims" не найдено. Нажмите "Добавить Claim" чтобы
+              создать claim.
+          claim:
+            view_live_html: Просмотреть claim вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать claim
+            delete: Удалить claim навсегда
+        attachments:
+          actions:
+            create_new: Добавить Attachment
+            reorder: Изменить порядок Attachments
+            reorder_done: Закончить изменять порядок Attachments
+          records:
+            title: Attachments
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Attachments" не найдено. Нажмите "Добавить Attachment"
+              чтобы создать attachment.
+          attachment:
+            view_live_html: Просмотреть attachment вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать attachment
+            delete: Удалить attachment навсегда
+        policies:
+          actions:
+            create_new: Добавить Policy
+            reorder: Изменить порядок Policies
+            reorder_done: Закончить изменять порядок Policies
+          records:
+            title: Policies
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Policies" не найдено. Нажмите "Добавить Policy"
+              чтобы создать policy.
+          policy:
+            view_live_html: Просмотреть policy вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать policy
+            delete: Удалить policy навсегда
+        employees:
+          actions:
+            create_new: Добавить Employee
+            reorder: Изменить порядок Employees
+            reorder_done: Закончить изменять порядок Employees
+          records:
+            title: Employees
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Employees" не найдено. Нажмите "Добавить Employee"
+              чтобы создать employee.
+          employee:
+            view_live_html: Просмотреть employee вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать employee
+            delete: Удалить employee навсегда
+        policy_features_policies:
+          actions:
+            create_new: Добавить Policy Features Policy
+            reorder: Изменить порядок Policy Features Policies
+            reorder_done: Закончить изменять порядок Policy Features Policies
+          records:
+            title: Policy Features Policies
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Policy Features Policies" не найдено. Нажмите "Добавить
+              Policy Features Policy" чтобы создать policy features policy.
+          policy_features_policy:
+            view_live_html: Просмотреть policy features policy вживую <br/><em>(в
+              новом окне)</em>
+            edit: Редактировать policy features policy
+            delete: Удалить policy features policy навсегда
+        policy_features:
+          actions:
+            create_new: Добавить Policy Feature
+            reorder: Изменить порядок Policy Features
+            reorder_done: Закончить изменять порядок Policy Features
+          records:
+            title: Policy Features
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Policy Features" не найдено. Нажмите "Добавить
+              Policy Feature" чтобы создать policy feature.
+          policy_feature:
+            view_live_html: Просмотреть policy feature вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать policy feature
+            delete: Удалить policy feature навсегда
+        policy_feature_groups:
+          actions:
+            create_new: Добавить Policy Feature Group
+            reorder: Изменить порядок Policy Feature Groups
+            reorder_done: Закончить изменять порядок Policy Feature Groups
+          records:
+            title: Policy Feature Groups
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Policy Feature Groups" не найдено. Нажмите "Добавить
+              Policy Feature Group" чтобы создать policy feature group.
+          policy_feature_group:
+            view_live_html: Просмотреть policy feature group вживую <br/><em>(в новом
+              окне)</em>
+            edit: Редактировать policy feature group
+            delete: Удалить policy feature group навсегда
+      claims:
+        show:
+          other: Другие Claims
+      attachments:
+        show:
+          other: Другие Attachments
+      policies:
+        show:
+          other: Другие Policies
+      employees:
+        show:
+          other: Другие Employees
+      policy_features_policies:
+        show:
+          other: Другие Policy Features Policies
+      policy_features:
+        show:
+          other: Другие Policy Features
+      policy_feature_groups:
+        show:
+          other: Другие Policy Feature Groups
+  activerecord:
+    attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
+      refinery/policies/attachment:
+        file: File
+        name: Name
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
+      refinery/policies/employee:
+        name: Name
+        user_id: User
+      refinery/policies/policy_features_policy:
+        policy_feature_id: Policy Feature
+        policy_id: Policy
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/policies/policy_feature:
+        name: Name
+        policy_feature_group_id: Policy Feature Group
+      refinery/policies/policy_feature_group:
+        name: Name

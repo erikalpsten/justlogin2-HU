@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @policy_features_policy.value %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Policy Feature</h1>
+    <p>
+      <%=raw @policy_features_policy.policy_feature_id %>
+    </p>
+  </section>
+  <section>
+    <h1>Policy</h1>
+    <p>
+      <%=raw @policy_features_policy.policy_id %>
+    </p>
+  </section>
+  <section>
+    <h1>Value</h1>
+    <p>
+      <%=raw @policy_features_policy.value %>
+    </p>
+  </section>
+  <section>
+    <h1>Is In Summary</h1>
+    <p>
+      <%=raw @policy_features_policy.is_in_summary %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="policy_features_policies">
+      <% @policy_features_policies.each do |policy_features_policy| %>
+        <li>
+          <%= link_to policy_features_policy.value, refinery.policies_policy_features_policy_path(policy_features_policy) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

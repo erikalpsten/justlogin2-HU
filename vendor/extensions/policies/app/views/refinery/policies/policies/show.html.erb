@@ -1,0 +1,51 @@
+<% content_for :body_content_title do %>
+  <%= @policy.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @policy.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Logo</h1>
+    <p>
+      <%=raw @policy.logo_id %>
+    </p>
+  </section>
+  <section>
+    <h1>Insurer</h1>
+    <p>
+      <%=raw @policy.insurer %>
+    </p>
+  </section>
+  <section>
+    <h1>Premium</h1>
+    <p>
+      <%=raw @policy.premium %>
+    </p>
+  </section>
+  <section>
+    <h1>Benefit</h1>
+    <p>
+      <%=raw @policy.benefit_id %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="policies">
+      <% @policies.each do |policy| %>
+        <li>
+          <%= link_to policy.name, refinery.policies_policy_path(policy) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

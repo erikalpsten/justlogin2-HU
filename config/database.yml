@@ -23,13 +23,12 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
 common: &common
   adapter: postgresql
-  username: "erik"
-  password: "secret"
+  username: "noopurjain"
 
 development:
   <<: *common #*default
   #user: quydoan
-  database: justlogin_hiveup_development2
+  database: justlogin_hiveup_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

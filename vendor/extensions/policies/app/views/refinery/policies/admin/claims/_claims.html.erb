@@ -1,0 +1,2 @@
+<%= will_paginate @claims if Refinery::Policies::Admin::ClaimsController.pageable? %>
+<%= render 'sortable_list' %>

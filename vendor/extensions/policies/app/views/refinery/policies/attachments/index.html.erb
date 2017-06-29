@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="attachments">
+    <% @attachments.each do |attachment| %>
+      <li>
+        <%= link_to attachment.name, refinery.policies_attachment_path(attachment) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

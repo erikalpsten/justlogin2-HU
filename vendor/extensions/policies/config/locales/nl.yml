@@ -1,0 +1,173 @@
+nl:
+  refinery:
+    plugins:
+      claims:
+        title: Claims
+      attachments:
+        title: Attachments
+      policies:
+        title: Policies
+      employees:
+        title: Employees
+      policy_features_policies:
+        title: Policy Features Policies
+      policy_features:
+        title: Policy Features
+      policy_feature_groups:
+        title: Policy Feature Groups
+    policies:
+      admin:
+        claims:
+          actions:
+            create_new: Nieuwe Claim toevoegen
+            reorder: De volgorde van de Claims wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Claim-volgorde
+          records:
+            title: Claims
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Claims. Druk op 'Nieuwe Claim toevoegen'
+              om de eerste toe te voegen.
+          claim:
+            view_live_html: Deze claim op de website bekijken <br/><em>(opent in een
+              nieuw venster)</em>
+            edit: Bewerk deze claim
+            delete: Deze claim definitief verwijderen
+        attachments:
+          actions:
+            create_new: Nieuwe Attachment toevoegen
+            reorder: De volgorde van de Attachments wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Attachment-volgorde
+          records:
+            title: Attachments
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Attachments. Druk op 'Nieuwe Attachment
+              toevoegen' om de eerste toe te voegen.
+          attachment:
+            view_live_html: Deze attachment op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze attachment
+            delete: Deze attachment definitief verwijderen
+        policies:
+          actions:
+            create_new: Nieuwe Policy toevoegen
+            reorder: De volgorde van de Policies wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Policy-volgorde
+          records:
+            title: Policies
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Policies. Druk op 'Nieuwe Policy toevoegen'
+              om de eerste toe te voegen.
+          policy:
+            view_live_html: Deze policy op de website bekijken <br/><em>(opent in
+              een nieuw venster)</em>
+            edit: Bewerk deze policy
+            delete: Deze policy definitief verwijderen
+        employees:
+          actions:
+            create_new: Nieuwe Employee toevoegen
+            reorder: De volgorde van de Employees wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Employee-volgorde
+          records:
+            title: Employees
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Employees. Druk op 'Nieuwe Employee toevoegen'
+              om de eerste toe te voegen.
+          employee:
+            view_live_html: Deze employee op de website bekijken <br/><em>(opent in
+              een nieuw venster)</em>
+            edit: Bewerk deze employee
+            delete: Deze employee definitief verwijderen
+        policy_features_policies:
+          actions:
+            create_new: Nieuwe Policy Features Policy toevoegen
+            reorder: De volgorde van de Policy Features Policies wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Policy Features Policy-volgorde
+          records:
+            title: Policy Features Policies
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Policy Features Policies. Druk op 'Nieuwe
+              Policy Features Policy toevoegen' om de eerste toe te voegen.
+          policy_features_policy:
+            view_live_html: Deze policy features policy op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze policy features policy
+            delete: Deze policy features policy definitief verwijderen
+        policy_features:
+          actions:
+            create_new: Nieuwe Policy Feature toevoegen
+            reorder: De volgorde van de Policy Features wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Policy Feature-volgorde
+          records:
+            title: Policy Features
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Policy Features. Druk op 'Nieuwe Policy
+              Feature toevoegen' om de eerste toe te voegen.
+          policy_feature:
+            view_live_html: Deze policy feature op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze policy feature
+            delete: Deze policy feature definitief verwijderen
+        policy_feature_groups:
+          actions:
+            create_new: Nieuwe Policy Feature Group toevoegen
+            reorder: De volgorde van de Policy Feature Groups wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Policy Feature Group-volgorde
+          records:
+            title: Policy Feature Groups
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Policy Feature Groups. Druk op 'Nieuwe
+              Policy Feature Group toevoegen' om de eerste toe te voegen.
+          policy_feature_group:
+            view_live_html: Deze policy feature group op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze policy feature group
+            delete: Deze policy feature group definitief verwijderen
+      claims:
+        show:
+          other: Andere Claims
+      attachments:
+        show:
+          other: Andere Attachments
+      policies:
+        show:
+          other: Andere Policies
+      employees:
+        show:
+          other: Andere Employees
+      policy_features_policies:
+        show:
+          other: Andere Policy Features Policies
+      policy_features:
+        show:
+          other: Andere Policy Features
+      policy_feature_groups:
+        show:
+          other: Andere Policy Feature Groups
+  activerecord:
+    attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
+      refinery/policies/attachment:
+        file: File
+        name: Name
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
+      refinery/policies/employee:
+        name: Name
+        user_id: User
+      refinery/policies/policy_features_policy:
+        policy_feature_id: Policy Feature
+        policy_id: Policy
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/policies/policy_feature:
+        name: Name
+        policy_feature_group_id: Policy Feature Group
+      refinery/policies/policy_feature_group:
+        name: Name

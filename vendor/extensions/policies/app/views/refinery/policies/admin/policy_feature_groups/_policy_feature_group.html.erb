@@ -1,0 +1,15 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(policy_feature_group) -%>">
+  <span class='title'>
+    <%= policy_feature_group.name %>
+  </span>
+
+  <span class='preview'></span>
+
+  <span class='actions'>
+    <%= action_icon(:preview, refinery.policies_policy_feature_group_path(policy_feature_group), t('.view_live_html')) %>
+    <%= action_icon(:edit,    refinery.edit_policies_admin_policy_feature_group_path(policy_feature_group), t('.edit') ) %>
+    <%= action_icon(:delete,  refinery.policies_admin_policy_feature_group_path(policy_feature_group), t('.delete'),
+      { class: "cancel confirm-delete",
+        data: {confirm: t('message',  scope: 'refinery.admin.delete', title: policy_feature_group.name)}}  ) %>
+  </span>
+</li>

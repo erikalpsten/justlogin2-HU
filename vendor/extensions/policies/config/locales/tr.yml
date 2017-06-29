@@ -1,0 +1,174 @@
+tr:
+  refinery:
+    plugins:
+      claims:
+        title: Claims
+      attachments:
+        title: Attachments
+      policies:
+        title: Policies
+      employees:
+        title: Employees
+      policy_features_policies:
+        title: Policy Features Policies
+      policy_features:
+        title: Policy Features
+      policy_feature_groups:
+        title: Policy Feature Groups
+    policies:
+      admin:
+        claims:
+          actions:
+            create_new: Yeni Ekle Claim
+            reorder: Tekrar sirala Claims
+            reorder_done: Tekrar siralama tamamlandiClaims
+          records:
+            title: Claims
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Claims yok henuz.  Tikla "Yeni Ekle Claim"
+              eklemek senin ilk claim.
+          claim:
+            view_live_html: Bunu canlu claim goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle claim
+            delete: Bunu Sil claim sonsuza dek
+        attachments:
+          actions:
+            create_new: Yeni Ekle Attachment
+            reorder: Tekrar sirala Attachments
+            reorder_done: Tekrar siralama tamamlandiAttachments
+          records:
+            title: Attachments
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Attachments yok henuz.  Tikla "Yeni Ekle Attachment"
+              eklemek senin ilk attachment.
+          attachment:
+            view_live_html: Bunu canlu attachment goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle attachment
+            delete: Bunu Sil attachment sonsuza dek
+        policies:
+          actions:
+            create_new: Yeni Ekle Policy
+            reorder: Tekrar sirala Policies
+            reorder_done: Tekrar siralama tamamlandiPolicies
+          records:
+            title: Policies
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Policies yok henuz.  Tikla "Yeni Ekle Policy"
+              eklemek senin ilk policy.
+          policy:
+            view_live_html: Bunu canlu policy goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle policy
+            delete: Bunu Sil policy sonsuza dek
+        employees:
+          actions:
+            create_new: Yeni Ekle Employee
+            reorder: Tekrar sirala Employees
+            reorder_done: Tekrar siralama tamamlandiEmployees
+          records:
+            title: Employees
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Employees yok henuz.  Tikla "Yeni Ekle Employee"
+              eklemek senin ilk employee.
+          employee:
+            view_live_html: Bunu canlu employee goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle employee
+            delete: Bunu Sil employee sonsuza dek
+        policy_features_policies:
+          actions:
+            create_new: Yeni Ekle Policy Features Policy
+            reorder: Tekrar sirala Policy Features Policies
+            reorder_done: Tekrar siralama tamamlandiPolicy Features Policies
+          records:
+            title: Policy Features Policies
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Policy Features Policies yok henuz.  Tikla
+              "Yeni Ekle Policy Features Policy" eklemek senin ilk policy features
+              policy.
+          policy_features_policy:
+            view_live_html: Bunu canlu policy features policy goruntule <br/><em>(yeni
+              bir pencerede acar)</em>
+            edit: Bunu Duzenle policy features policy
+            delete: Bunu Sil policy features policy sonsuza dek
+        policy_features:
+          actions:
+            create_new: Yeni Ekle Policy Feature
+            reorder: Tekrar sirala Policy Features
+            reorder_done: Tekrar siralama tamamlandiPolicy Features
+          records:
+            title: Policy Features
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Policy Features yok henuz.  Tikla "Yeni Ekle
+              Policy Feature" eklemek senin ilk policy feature.
+          policy_feature:
+            view_live_html: Bunu canlu policy feature goruntule <br/><em>(yeni bir
+              pencerede acar)</em>
+            edit: Bunu Duzenle policy feature
+            delete: Bunu Sil policy feature sonsuza dek
+        policy_feature_groups:
+          actions:
+            create_new: Yeni Ekle Policy Feature Group
+            reorder: Tekrar sirala Policy Feature Groups
+            reorder_done: Tekrar siralama tamamlandiPolicy Feature Groups
+          records:
+            title: Policy Feature Groups
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Policy Feature Groups yok henuz.  Tikla "Yeni
+              Ekle Policy Feature Group" eklemek senin ilk policy feature group.
+          policy_feature_group:
+            view_live_html: Bunu canlu policy feature group goruntule <br/><em>(yeni
+              bir pencerede acar)</em>
+            edit: Bunu Duzenle policy feature group
+            delete: Bunu Sil policy feature group sonsuza dek
+      claims:
+        show:
+          other: Diger Claims
+      attachments:
+        show:
+          other: Diger Attachments
+      policies:
+        show:
+          other: Diger Policies
+      employees:
+        show:
+          other: Diger Employees
+      policy_features_policies:
+        show:
+          other: Diger Policy Features Policies
+      policy_features:
+        show:
+          other: Diger Policy Features
+      policy_feature_groups:
+        show:
+          other: Diger Policy Feature Groups
+  activerecord:
+    attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
+      refinery/policies/attachment:
+        file: File
+        name: Name
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
+      refinery/policies/employee:
+        name: Name
+        user_id: User
+      refinery/policies/policy_features_policy:
+        policy_feature_id: Policy Feature
+        policy_id: Policy
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/policies/policy_feature:
+        name: Name
+        policy_feature_group_id: Policy Feature Group
+      refinery/policies/policy_feature_group:
+        name: Name

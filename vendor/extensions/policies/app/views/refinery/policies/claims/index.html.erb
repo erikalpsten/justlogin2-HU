@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="claims">
+    <% @claims.each do |claim| %>
+      <li>
+        <%= link_to claim.name, refinery.policies_claim_path(claim) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

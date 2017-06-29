@@ -1,0 +1,27 @@
+<% content_for :body_content_title do %>
+  <%= @policy_feature_group.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @policy_feature_group.name %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="policy_feature_groups">
+      <% @policy_feature_groups.each do |policy_feature_group| %>
+        <li>
+          <%= link_to policy_feature_group.name, refinery.policies_policy_feature_group_path(policy_feature_group) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

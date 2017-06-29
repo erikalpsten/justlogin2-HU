@@ -1,0 +1,169 @@
+en:
+  refinery:
+    plugins:
+      claims:
+        title: Claims
+      attachments:
+        title: Attachments
+      policies:
+        title: Policies
+      employees:
+        title: Employees
+      policy_features_policies:
+        title: Policy Features Policies
+      policy_features:
+        title: Policy Features
+      policy_feature_groups:
+        title: Policy Feature Groups
+    policies:
+      admin:
+        claims:
+          actions:
+            create_new: Add New Claim
+            reorder: Reorder Claims
+            reorder_done: Done Reordering Claims
+          records:
+            title: Claims
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Claims yet. Click "Add New Claim" to add your
+              first claim.
+          claim:
+            view_live_html: View this claim live <br/><em>(opens in a new window)</em>
+            edit: Edit this claim
+            delete: Remove this claim forever
+        attachments:
+          actions:
+            create_new: Add New Attachment
+            reorder: Reorder Attachments
+            reorder_done: Done Reordering Attachments
+          records:
+            title: Attachments
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Attachments yet. Click "Add New Attachment"
+              to add your first attachment.
+          attachment:
+            view_live_html: View this attachment live <br/><em>(opens in a new window)</em>
+            edit: Edit this attachment
+            delete: Remove this attachment forever
+        policies:
+          actions:
+            create_new: Add New Policy
+            reorder: Reorder Policies
+            reorder_done: Done Reordering Policies
+          records:
+            title: Policies
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Policies yet. Click "Add New Policy" to add
+              your first policy.
+          policy:
+            view_live_html: View this policy live <br/><em>(opens in a new window)</em>
+            edit: Edit this policy
+            delete: Remove this policy forever
+        employees:
+          actions:
+            create_new: Add New Employee
+            reorder: Reorder Employees
+            reorder_done: Done Reordering Employees
+          records:
+            title: Employees
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Employees yet. Click "Add New Employee" to
+              add your first employee.
+          employee:
+            view_live_html: View this employee live <br/><em>(opens in a new window)</em>
+            edit: Edit this employee
+            delete: Remove this employee forever
+        policy_features_policies:
+          actions:
+            create_new: Add New Policy Features Policy
+            reorder: Reorder Policy Features Policies
+            reorder_done: Done Reordering Policy Features Policies
+          records:
+            title: Policy Features Policies
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Policy Features Policies yet. Click "Add New
+              Policy Features Policy" to add your first policy features policy.
+          policy_features_policy:
+            view_live_html: View this policy features policy live <br/><em>(opens
+              in a new window)</em>
+            edit: Edit this policy features policy
+            delete: Remove this policy features policy forever
+        policy_features:
+          actions:
+            create_new: Add New Policy Feature
+            reorder: Reorder Policy Features
+            reorder_done: Done Reordering Policy Features
+          records:
+            title: Policy Features
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Policy Features yet. Click "Add New Policy
+              Feature" to add your first policy feature.
+          policy_feature:
+            view_live_html: View this policy feature live <br/><em>(opens in a new
+              window)</em>
+            edit: Edit this policy feature
+            delete: Remove this policy feature forever
+        policy_feature_groups:
+          actions:
+            create_new: Add New Policy Feature Group
+            reorder: Reorder Policy Feature Groups
+            reorder_done: Done Reordering Policy Feature Groups
+          records:
+            title: Policy Feature Groups
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Policy Feature Groups yet. Click "Add New Policy
+              Feature Group" to add your first policy feature group.
+          policy_feature_group:
+            view_live_html: View this policy feature group live <br/><em>(opens in
+              a new window)</em>
+            edit: Edit this policy feature group
+            delete: Remove this policy feature group forever
+      claims:
+        show:
+          other: Other Claims
+      attachments:
+        show:
+          other: Other Attachments
+      policies:
+        show:
+          other: Other Policies
+      employees:
+        show:
+          other: Other Employees
+      policy_features_policies:
+        show:
+          other: Other Policy Features Policies
+      policy_features:
+        show:
+          other: Other Policy Features
+      policy_feature_groups:
+        show:
+          other: Other Policy Feature Groups
+  activerecord:
+    attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
+      refinery/policies/attachment:
+        file: File
+        name: Name
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
+      refinery/policies/employee:
+        name: Name
+        user_id: User
+      refinery/policies/policy_features_policy:
+        policy_feature_id: Policy Feature
+        policy_id: Policy
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/policies/policy_feature:
+        name: Name
+        policy_feature_group_id: Policy Feature Group
+      refinery/policies/policy_feature_group:
+        name: Name

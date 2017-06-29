@@ -1,0 +1,174 @@
+nb:
+  refinery:
+    plugins:
+      claims:
+        title: Claims
+      attachments:
+        title: Attachments
+      policies:
+        title: Policies
+      employees:
+        title: Employees
+      policy_features_policies:
+        title: Policy Features Policies
+      policy_features:
+        title: Policy Features
+      policy_feature_groups:
+        title: Policy Feature Groups
+    policies:
+      admin:
+        claims:
+          actions:
+            create_new: Lag en ny Claim
+            reorder: Endre rekkefølgen på Claims
+            reorder_done: Ferdig å endre rekkefølgen Claims
+          records:
+            title: Claims
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Claims enda. Klikk på "Lag en ny Claim" for
+              å legge til din første claim.
+          claim:
+            view_live_html: Vis hvordan denne claim ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne claim
+            delete: Fjern denne claim permanent
+        attachments:
+          actions:
+            create_new: Lag en ny Attachment
+            reorder: Endre rekkefølgen på Attachments
+            reorder_done: Ferdig å endre rekkefølgen Attachments
+          records:
+            title: Attachments
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Attachments enda. Klikk på "Lag en ny Attachment"
+              for å legge til din første attachment.
+          attachment:
+            view_live_html: Vis hvordan denne attachment ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne attachment
+            delete: Fjern denne attachment permanent
+        policies:
+          actions:
+            create_new: Lag en ny Policy
+            reorder: Endre rekkefølgen på Policies
+            reorder_done: Ferdig å endre rekkefølgen Policies
+          records:
+            title: Policies
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Policies enda. Klikk på "Lag en ny Policy"
+              for å legge til din første policy.
+          policy:
+            view_live_html: Vis hvordan denne policy ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne policy
+            delete: Fjern denne policy permanent
+        employees:
+          actions:
+            create_new: Lag en ny Employee
+            reorder: Endre rekkefølgen på Employees
+            reorder_done: Ferdig å endre rekkefølgen Employees
+          records:
+            title: Employees
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Employees enda. Klikk på "Lag en ny Employee"
+              for å legge til din første employee.
+          employee:
+            view_live_html: Vis hvordan denne employee ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne employee
+            delete: Fjern denne employee permanent
+        policy_features_policies:
+          actions:
+            create_new: Lag en ny Policy Features Policy
+            reorder: Endre rekkefølgen på Policy Features Policies
+            reorder_done: Ferdig å endre rekkefølgen Policy Features Policies
+          records:
+            title: Policy Features Policies
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Policy Features Policies enda. Klikk på "Lag
+              en ny Policy Features Policy" for å legge til din første policy features
+              policy.
+          policy_features_policy:
+            view_live_html: Vis hvordan denne policy features policy ser ut offentlig
+              <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne policy features policy
+            delete: Fjern denne policy features policy permanent
+        policy_features:
+          actions:
+            create_new: Lag en ny Policy Feature
+            reorder: Endre rekkefølgen på Policy Features
+            reorder_done: Ferdig å endre rekkefølgen Policy Features
+          records:
+            title: Policy Features
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Policy Features enda. Klikk på "Lag en ny Policy
+              Feature" for å legge til din første policy feature.
+          policy_feature:
+            view_live_html: Vis hvordan denne policy feature ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne policy feature
+            delete: Fjern denne policy feature permanent
+        policy_feature_groups:
+          actions:
+            create_new: Lag en ny Policy Feature Group
+            reorder: Endre rekkefølgen på Policy Feature Groups
+            reorder_done: Ferdig å endre rekkefølgen Policy Feature Groups
+          records:
+            title: Policy Feature Groups
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Policy Feature Groups enda. Klikk på "Lag en
+              ny Policy Feature Group" for å legge til din første policy feature group.
+          policy_feature_group:
+            view_live_html: Vis hvordan denne policy feature group ser ut offentlig
+              <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne policy feature group
+            delete: Fjern denne policy feature group permanent
+      claims:
+        show:
+          other: Andre Claims
+      attachments:
+        show:
+          other: Andre Attachments
+      policies:
+        show:
+          other: Andre Policies
+      employees:
+        show:
+          other: Andre Employees
+      policy_features_policies:
+        show:
+          other: Andre Policy Features Policies
+      policy_features:
+        show:
+          other: Andre Policy Features
+      policy_feature_groups:
+        show:
+          other: Andre Policy Feature Groups
+  activerecord:
+    attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
+      refinery/policies/attachment:
+        file: File
+        name: Name
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
+      refinery/policies/employee:
+        name: Name
+        user_id: User
+      refinery/policies/policy_features_policy:
+        policy_feature_id: Policy Feature
+        policy_id: Policy
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/policies/policy_feature:
+        name: Name
+        policy_feature_group_id: Policy Feature Group
+      refinery/policies/policy_feature_group:
+        name: Name

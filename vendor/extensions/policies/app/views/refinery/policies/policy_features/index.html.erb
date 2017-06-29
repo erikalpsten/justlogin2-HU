@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="policy_features">
+    <% @policy_features.each do |policy_feature| %>
+      <li>
+        <%= link_to policy_feature.name, refinery.policies_policy_feature_path(policy_feature) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

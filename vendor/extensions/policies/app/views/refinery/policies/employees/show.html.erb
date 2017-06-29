@@ -1,0 +1,33 @@
+<% content_for :body_content_title do %>
+  <%= @employee.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @employee.name %>
+    </p>
+  </section>
+  <section>
+    <h1>User</h1>
+    <p>
+      <%=raw @employee.user_id %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="employees">
+      <% @employees.each do |employee| %>
+        <li>
+          <%= link_to employee.name, refinery.policies_employee_path(employee) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
